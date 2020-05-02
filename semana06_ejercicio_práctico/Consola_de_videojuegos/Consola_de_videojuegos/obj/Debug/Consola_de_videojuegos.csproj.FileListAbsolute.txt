@@ -1,0 +1,5 @@
+C:\Users\cliente\RiderProjects\Consola_de_videojuegos\Consola_de_videojuegos\obj\Debug\Consola_de_videojuegos.csprojAssemblyReference.cache
+C:\Users\cliente\RiderProjects\Consola_de_videojuegos\Consola_de_videojuegos\bin\Debug\Consola_de_videojuegos.exe
+C:\Users\cliente\RiderProjects\Consola_de_videojuegos\Consola_de_videojuegos\bin\Debug\Consola_de_videojuegos.pdb
+C:\Users\cliente\RiderProjects\Consola_de_videojuegos\Consola_de_videojuegos\obj\Debug\Consola_de_videojuegos.exe
+C:\Users\cliente\RiderProjects\Consola_de_videojuegos\Consola_de_videojuegos\obj\Debug\Consola_de_videojuegos.pdb
