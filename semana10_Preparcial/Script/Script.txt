@@ -1,0 +1,66 @@
+CREATE TABLE public."Cliente"
+(
+    "Usuario" character varying(25) NOT NULL,
+    "Constraseña" character varying(25) NOT NULL,
+    "Admin" boolean NOT NULL,
+    CONSTRAINT pk_usuario_id PRIMARY KEY ("Usuario")
+);
+
+ALTER TABLE public."Cliente"
+    OWNER to postgres;
+
+CREATE TABLE public."Inventario"
+(
+    "Producto_id" serial NOT NULL,
+    "Cantidad" integer NOT NULL,
+    "Precio" integer NOT NULL,
+    "Nombre" character varying(30) NOT NULL,
+    "Descripción" character varying(30) NOT NULL,
+    CONSTRAINT pk_producto_id PRIMARY KEY ("Producto_id")
+);
+
+ALTER TABLE public."Inventario"
+    OWNER to postgres;
+
+CREATE TABLE public."Pedido"
+(
+    "Pedido_id" serial NOT NULL,
+    "Usuario" character varying NOT NULL,
+    "Producto_id" integer NOT NULL,
+    "Cantidad_pr" integer NOT NULL,
+    "Precio_T" integer NOT NULL,
+    CONSTRAINT "pk_Pedido_id" PRIMARY KEY ("Pedido_id"),
+    CONSTRAINT fk_usuario FOREIGN KEY ("Usuario")
+        REFERENCES public."Cliente" ("Usuario") MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION
+        NOT VALID,
+    CONSTRAINT fk_producto_id FOREIGN KEY ("Producto_id")
+        REFERENCES public."Inventario" ("Producto_id") MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION
+        NOT VALID
+);
+
+ALTER TABLE public."Pedido"
+    OWNER to postgres;
+
+ALTER TABLE public."Pedido"
+    OWNER to postgres;
+
+INSERT INTO Cliente(
+Usuario,Contraseña,Admin)
+VALUES('RIADAPLE','1234',true)
+
+
+INSERT INTO Cliente(
+Usuario,Contraseña,Admin)
+VALUES('Luisgch','1234',false)
+
+INSERT INTO Inventario(
+Cantidad,Precio,Nombre,Descripción)
+VALUES(45,30,'GTA V','Juego de violencia :v')
+
+INSERT INTO Pedido(
+Usuario,Producto_id,Cantidad_pr,Precio_t)
+VALUES('RIADAPLE',2,4,120)
