@@ -1,0 +1,8 @@
+Patrón utilizado: Proxy
+
+Se escogió este patrón de diseño, principalmente por la confidencialidad que ofrece, ya que si,
+por ejemplo, se desea ocultar por algún motivo las operaciones efectuadas (Lo cual, era la 
+intención en este caso), este es el patrón adecuado para hacerlo.
+
+A pesar de que no sea el más eficiente en términos de código, el propio código, a mi parecer, es
+bastante legible y bastante funcional con el patrón aplicado
